@@ -5,14 +5,14 @@
 
   //kui on sisseloginud, siis kohe main.php lehele
   if (isset($_SESSION["userId"])) {
-    header("Location: main.php");
+    header("Location: upload.php");
     exit();
   }
 
   $loginEmail = "";
   $loginEmailError = "";
   $notice = "";
-  
+
   //kas logitakse sisse
   if (isset($_POST["loginButton"])) {
      //kas on kasutajanimi sisestatud
