@@ -110,7 +110,7 @@
 		} else {
 			$notice = "Palun valige kõigepealt pildifail!";
 		} //kas üldse mõni fail valiti, lõppeb
-	}//kas vajutati submit nuppu, lõppeb
+	//kas vajutati submit nuppu, lõppeb
 	/*function resize_image($image, $origW, $origH, $w, $h){
 		$dst = imagecreatetruecolor($w, $h);
 		imagecopyresampled($dst, $image, 0, 0, 0, 0, $w, $h, $origW, $origH);
