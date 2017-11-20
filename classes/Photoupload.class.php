@@ -70,7 +70,7 @@
 		return $dst;
 	}
 		public function addWatermark(){
-		$stamp = imagecreatefrompng("../../graphics/hmv_logo.png");
+		$stamp = imagecreatefrompng("../graphics/hmv_logo.png");
 				$stampWidth = imagesx($stamp);
 				$stampHeight = imagesy($stamp);
 				$stampPosX = imagesx($this->myImage) - $stampWidth - $this->marginRight;
@@ -81,7 +81,7 @@
 		public function addTextWatermark($text){
 			$textColor = imagecolorallocatealpha($this->myImage, 150, 150, 150, 50);
 				//RGBA alpha 0 -127
-				imagettftext($this->myImage, 20, 0, 10, 25, $textColor, "../../graphics/ARIAL.TTF", $text);
+				imagettftext($this->myImage, 20, 0, 10, 25, $textColor, "../graphics/ARIAL.TTF", $text);
 		}
 		
 		public function savePhoto($directory, $fileName) {
