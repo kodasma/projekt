@@ -116,9 +116,9 @@
 		imagecopyresampled($dst, $image, 0, 0, 0, 0, $w, $h, $origW, $origH);
 		return $dst;
 	}*/
-	require("header.php");
 ?>
-
+	<html>
+	<body>
 
 	<h1>Koduloomade blogi</h1>
 	<p><a href="main.php">Pealeht</a></p>
@@ -131,10 +131,7 @@
 	</form>
 	<p><a href="?logout=1">Logi välja</a>!</p>
 	<span><?php echo $notice; ?></span>
+
+	</body>
+	</html>
 	
-	
-<?php
-	echo '<script type="text/javascript" src="javascript/checkFileSize.js"></script>';
-	
-	require("footer.php");
-?>
