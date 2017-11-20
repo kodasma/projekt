@@ -25,7 +25,7 @@
 				$_SESSION["userEmail"] = $emailFromDb;
 				
 				//liigume edasi pealehele (main.php)
-				header("Location:main.php");
+				header("Location:upload.php");
 				exit();
 			} else {
 				$notice = "Vale salasõna!";
