@@ -26,6 +26,9 @@
 <h2>Kui kasutajat pole veel registreeritud</h2>
 <p><a href="signup.php">Loo kasutaja</a>!</p>
 
+<p><a href="upload.php">Lisa pilt</a>!</p>
+
+
 
 </body>
 </html>
