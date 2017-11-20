@@ -1,4 +1,8 @@
 <?php
+<<<<<<< HEAD
+
+?>
+=======
   // require("../../../config.php");
   require("functions.php");
 
@@ -49,6 +53,13 @@
 		<input name="loginButton" type="submit" value="Logi sisse">
     <span><?php echo $notice; ?></span>
 	</form>
+<<<<<<< HEAD
+		
+</body>
+</html>
+>>>>>>> 7d9b42a03b347bab869df389abf8660feeb4df7a
+=======
 
   </body>
 </html>
+>>>>>>> 88f62e6a10a79fef249324e84db9bca7c58e4838
