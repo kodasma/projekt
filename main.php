@@ -21,10 +21,10 @@
 <p>Veebileht on loodud oma koduloomade näitamiseks teistele.</p>
 
 <h2>Kui kasutaja on juba olemas, siis</h2>
-<p><a href="login.php">logi sisse</a>!</p>
+<p><a href="login.php">Logi sisse</a>!</p>
 
 <h2>Kui kasutajat pole veel registreeritud</h2>
-<p><a href="signup.php">loo kasutaja</a>!</p>
+<p><a href="signup.php">Loo kasutaja</a>!</p>
 
 
 </body>
