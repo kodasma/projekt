@@ -1,6 +1,6 @@
 <?php
 
-
+$allIdeas = "";
 
 ?>
 
@@ -19,6 +19,11 @@
 
 <h1>Koduloomade blogi Sinu lemmikule.</h1>
 <p>Veebileht on loodud oma koduloomade näitamiseks teistele.</p>
+
+<h2>Senised lood</h2>
+<div style="width: 40%">
+<?php echo $allStories; ?>
+</div>
 
 <h2>Kui kasutaja on juba olemas, siis</h2>
 <p><a href="login.php">Logi sisse</a>!</p>
