@@ -53,6 +53,25 @@
 		$stmt->close();
 		$mysqli->close();
 	}
+
+	//Kõikide looma lugude lugemine
+  function readAllStories() {
+    $ideasHTML = "";
+    $mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+    //$stmt = $mysqli->prepare("SELECT idea, ideaColor FROM vpuserideas WHERE userid = ?");
+    $stmt = $mysqli->prepare("SELECT id, story FROM projectstories WHERE userid = ? ORDER BY id DESC");
+    $stmt->bind_param("i", $_SESSION["userId"]);
+    $stmt->bind_result($storyId, $story);
+    $stmt->execute();
+    //$result = array();
+    while ($stmt->fetch()) {
+      $ideasHTML .= '<p>' .$story ."</p> \n";
+      //link: <a href="ideaedit.php?id=4"> Toimeta </a>
+    }
+    $stmt->close();
+    $mysqli->close();
+    return $ideasHTML;
+  }
 	
 	function test_input($data){
 		$data = trim($data); //ebavajalikud tühikud jms eemaldada
