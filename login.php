@@ -40,11 +40,11 @@
 	<h2>Logi sisse</h2>
 	
 	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-		<label>Kasutajanimi (E-post): </label>
+		<label>Kasutajanimi (E-post): </label><br>
 		<input name="loginEmail" type="email" value="<?php echo $loginEmail; ?>">
     <span><?php echo $loginEmailError; ?></span>
 		<br><br>
-		<label>Salasõna: </label>
+		<label>Salasõna: </label><br>
 		<input name="loginPassword" placeholder="Salasõna" type="password">
     <span></span>
 		<br><br>
