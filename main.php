@@ -1,11 +1,9 @@
 <?php
-<<<<<<< HEAD
-$allStories = "";
-=======
+
+	$allStories = "";
 	require("functions.php");
 	$allStories = readAllStories();
 
->>>>>>> 49d5b1c819b74211a88d5814c930256fed6aa989
 ?>
 
 
