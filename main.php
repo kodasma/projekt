@@ -17,7 +17,7 @@ $allStories = readAllStories();
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
+<div class="container">
 <h1>Koduloomade blogi Sinu lemmikule.</h1>
 <p>Veebileht on loodud oma koduloomade näitamiseks teistele.</p>
 
@@ -34,6 +34,6 @@ $allStories = readAllStories();
 
 
 
-
+</div>
 </body>
 </html>
