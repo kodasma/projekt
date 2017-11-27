@@ -1,0 +1,66 @@
+body {
+  font-family: 'Space Mono', monospace;
+  box-sizing: border-box;
+}
+
+@-webkit-keyframes pastelRainbow {
+  0% {
+    background-position: 94% 0%; }
+  50% {
+    background-position: 7% 100%; }
+  100% {
+    background-position: 94% 0%; } }
+
+@-moz-keyframes pastelRainbow {
+  0% {
+    background-position: 94% 0%; }
+  50% {
+    background-position: 7% 100%; }
+  100% {
+    background-position: 94% 0%; } }
+
+@keyframes pastelRainbow {
+  0% {
+    background-position: 94% 0%; }
+  50% {
+    background-position: 7% 100%; }
+  100% {
+    background-position: 94% 0%;
+    } }
+
+.container {
+  background: linear-gradient(225deg, #ffabab, #ffdaab, #ddffab, #abe4ff, #d9abff);
+  background-size: 300% 300%;
+  display: table;
+  height: 100vh;
+  margin: 0;
+  position: relative;
+  width: 100vw;
+  animation: pastelRainbow 5s ease infinite;
+}
+
+.menu {
+  margin-top: 150px;
+  margin-left: 50px;
+}
+
+li {
+  padding: 10px;
+}
+
+.image {
+  display: absolute;
+  width: 40%;
+}
+
+
+
+
+
+
+
+
+
+
+
+

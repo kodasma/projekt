@@ -4,7 +4,7 @@
 
   //kui on kasutaja loodud, siis kohe main.php lehele
   if (isset($_POST["loginButton"])) {
-    header("Location: main.php");
+    header("Location: upload.php");
     exit();
   }
 
