@@ -126,14 +126,13 @@
 		<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
 		<label>Lisage pildi kohta paar sõna:</label><br>
 		<textarea name="story"></textarea><br><br>
-		
 		<input type="submit" value="Lae üles" name="submit" id="submitPhoto"><span id="fileSizeError"></span>
+		<span><?php echo $notice; ?></span>
 	<br></br>
 	
 	
 	</form>
 	<p><a href="?logout=1">Logi välja</a>!</p>
-	<span><?php echo $notice; ?></span>
 
 	</body>
 	</html>
