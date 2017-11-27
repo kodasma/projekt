@@ -131,7 +131,7 @@
 	<br></br>
 	<h2>Lugu Sinu lemmikloomast</h2>
 	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-		<input name="idea" type="text">
+		<textarea name="idea"><?php echo $idea->text; ?></textarea>
 		<input name="ideaBtn" type="submit" value="Salvesta">
 		<span><?php echo $notice; ?></span>
 	
