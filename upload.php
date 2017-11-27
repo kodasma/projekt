@@ -140,7 +140,7 @@
 	
 	</form>
 	<p><a href="?logout=1">Logi välja</a>!</p>
-	<span><?php echo $notice; ?></span>
+	
 
 	</body>
 	</html>
