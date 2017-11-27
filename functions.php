@@ -73,7 +73,7 @@
     return $ideasHTML;
   }
 	
-	function saveStory($story){
+	function saveStory($story, $filename){
 		//echo $color;
 		$notice = "";
 		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);

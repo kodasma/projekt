@@ -40,7 +40,7 @@
 	if(isset($_POST["submit"])) {
 		
 		//kas mingi fail valiti
-		if(!empty($_FILES["fileToUpload"]["name"])){
+		if(!empty($_FILES["fileToUpload"]["name"]) and !empty($_POST["story"])){
 			
 			$imageFileType = strtolower(pathinfo(basename($_FILES["fileToUpload"]["name"]))["extension"]);
 			//$target_file = $target_dir . basename($_FILES["fileToUpload"]["name"]);
@@ -92,9 +92,6 @@
 				$notice .= "Vabandust, pilti ei laetud üles! ";
 			//Kui saab üles laadida
 			} else {
-				
-				
-				
 				//kasutan klassi
 				$myPhoto = new Photoupload ($_FILES["fileToUpload"]["tmp_name"], $imageFileType);
 				$myPhoto->readExif();
@@ -105,7 +102,10 @@
 				$myPhoto->savePhoto($target_dir, $target_file);
 				$myPhoto->clearImages();
 				unset($myPhoto);
+				saveStory($_POST["story"], $target_file);
 			}
+
+
 		
 		} else {
 			$notice = "Palun valige kõigepealt pildifail!";
@@ -128,7 +128,7 @@
 		<label>Valige pildifail:</label>
 		<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
 		<label>Lisage pildi kohta paar sõna:</label><br>
-		<textarea name="idea"></textarea><br><br>
+		<textarea name="story"></textarea><br><br>
 		<input type="submit" value="Lae üles" name="submit" id="submitPhoto"><span id="fileSizeError"></span>
 	<br></br>
 	
