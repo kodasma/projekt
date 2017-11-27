@@ -1,6 +1,6 @@
 <?php
-
-$allStories = "";
+	require("functions.php");
+	$allStories = readAllStories();
 
 ?>
 
