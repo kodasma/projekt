@@ -3,7 +3,7 @@
   // require("../../../config.php");
   require("functions.php");
 
-  //kui on sisseloginud, siis kohe main.php lehele
+  //kui on sisseloginud, siis kohe upload lehele
   if (isset($_SESSION["userId"])) {
     header("Location: upload.php");
     exit();
