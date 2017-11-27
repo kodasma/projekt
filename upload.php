@@ -124,23 +124,17 @@
 	<p><a href="main.php">Pealeht</a></p>
 	<hr>
 	<h2>Foto üleslaadimine</h2>
-	<form action="upload.php" method="post" enctype="multipart/form-data">
+	<form action="upload.php" method="post" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 		<label>Valige pildifail:</label>
 		<input type="file" name="fileToUpload" id="fileToUpload">
+		<textarea name="idea"></textarea>
 		<input type="submit" value="Lae üles" name="submit" id="submitPhoto"><span id="fileSizeError"></span>
 	<br></br>
-	<h2>Lugu Sinu lemmikloomast</h2>
-	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
-		<textarea name="idea"><?php echo $idea->text; ?></textarea>
-		<input name="ideaBtn" type="submit" value="Salvesta">
-		<span><?php echo $notice; ?></span>
-	
-	</form>
 	
 	
 	</form>
 	<p><a href="?logout=1">Logi välja</a>!</p>
-	
+	<span><?php echo $notice; ?></span>
 
 	</body>
 	</html>
