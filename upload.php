@@ -124,10 +124,14 @@
 	<form action="upload.php" method="post" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 		<label>Valige pildifail:</label>
 		<input type="file" name="fileToUpload" id="fileToUpload">
+<<<<<<< HEAD
 		<textarea name="idea"></textarea>
 		<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
 		<label>Lisage pildi kohta paar sõna:</label><br>
 		<textarea name="story"></textarea><br><br>
+=======
+		<textarea name="idea"></textarea>
+>>>>>>> 49d5b1c819b74211a88d5814c930256fed6aa989
 		<input type="submit" value="Lae üles" name="submit" id="submitPhoto"><span id="fileSizeError"></span>
 	<br></br>
 	
