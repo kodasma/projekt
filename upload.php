@@ -30,7 +30,7 @@
 	$target_dir = "../images/";
 	$target_file;
 	$uploadOk = 1;
-	$imageFileType;
+	$imageFileType = "";
 	$maxWidth = 600;
 	$maxHeight = 400;
 	$marginBottom = 10;
