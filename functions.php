@@ -77,9 +77,9 @@
 		//echo $color;
 		$notice = "";
 		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
-		$stmt = $mysqli->prepare("INSERT INTO projectstories (userid, story) VALUES (?, ?)");
+		$stmt = $mysqli->prepare("INSERT INTO projectphotos (userid, filename, story) VALUES (?, ?, ?)");
 		echo $mysqli->error;
-		$stmt->bind_param("is", $_SESSION["userId"], $story);
+		$stmt->bind_param("iss", $_SESSION["userId"], $filename, $story);
 		if($stmt->execute()){
 			$notice = "Lugu on salvestatud!";
 		} else {
