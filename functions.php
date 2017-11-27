@@ -1,6 +1,7 @@
 <?php
 	require("../../config.php");
 	$database = "if17_kodakevi";
+	$photo_dir = "../images/";
 	
 	session_start();
 	
@@ -59,13 +60,14 @@
     $ideasHTML = "";
     $mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
     //$stmt = $mysqli->prepare("SELECT idea, ideaColor FROM vpuserideas WHERE userid = ?");
-    $stmt = $mysqli->prepare("SELECT id, story FROM projectstories WHERE userid = ? ORDER BY id DESC");
+    $stmt = $mysqli->prepare("SELECT filename, story FROM projectphotos WHERE userid = ? ORDER BY id DESC");
     $stmt->bind_param("i", $_SESSION["userId"]);
-    $stmt->bind_result($storyId, $story);
+    $stmt->bind_result($filename, $story);
     $stmt->execute();
     //$result = array();
     while ($stmt->fetch()) {
-      $ideasHTML .= '<p>' .$story ."</p> \n";
+      #$ideasHTML .= '<p>' .$filename ." " .$story ."</p> \n";
+	  $ideasHTML .= '<img src="' .$GLOBALS["photo_dir"] .$filename .'" alt="' .$story .'">';
       //link: <a href="ideaedit.php?id=4"> Toimeta </a>
     }
     $stmt->close();
