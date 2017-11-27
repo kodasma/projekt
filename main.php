@@ -27,7 +27,7 @@ $allStories = readAllStories();
 </div>
 
 <h2>Kui kasutaja on juba olemas, siis</h2>
-<p><a href="login.php">Logi sisse</a>!</p>
+<p><a href="login.php">Lisa pilt</a>!</p>
 
 <h2>Kui kasutajat pole veel registreeritud</h2>
 <p><a href="signup.php">Loo kasutaja</a>!</p>

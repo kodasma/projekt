@@ -1,7 +1,34 @@
-body {
-  font-family: 'Space Mono', monospace;
+* {
   box-sizing: border-box;
 }
+
+body {
+  margin: 0;
+  background-color: lemonchiffon;
+}
+
+#top, #bottom, #left, #right {
+  background: #f9e310;
+  position: fixed;
+  opacity: 1;
+  z-index: 50;
+}
+
+#left, #right {
+  top: 0; bottom: 0;
+  width: 4px;
+}
+
+#left { left: 0; }
+#right { right: 0; }
+
+#top, #bottom {
+  left: 0; right: 0;
+  height: 4px;
+}
+
+#top { top: 0; }
+#bottom { bottom: 0; }
 
 @-webkit-keyframes pastelRainbow {
   0% {

@@ -96,9 +96,6 @@
 				$myPhoto = new Photoupload ($_FILES["fileToUpload"]["tmp_name"], $imageFileType);
 				$myPhoto->readExif();
 				$myPhoto->resizeImage($maxWidth, $maxHeight);
-				$myPhoto->addWatermark();
-				//$myPhoto->addTextWatermark($myPhoto->exifToImage);
-				$myPhoto->addTextWatermark("hmv_foto");
 				$myPhoto->savePhoto($target_dir, $target_file);
 				$myPhoto->clearImages();
 				unset($myPhoto);
@@ -126,9 +123,14 @@
 	<h2>Foto üleslaadimine</h2>
 	<form action="upload.php" method="post" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 		<label>Valige pildifail:</label>
+<<<<<<< HEAD
+		<input type="file" name="fileToUpload" id="fileToUpload">
+		<textarea name="idea"></textarea>
+=======
 		<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
 		<label>Lisage pildi kohta paar sõna:</label><br>
 		<textarea name="story"></textarea><br><br>
+>>>>>>> 24135fc952e714288928704d6fda3ca8a1b16861
 		<input type="submit" value="Lae üles" name="submit" id="submitPhoto"><span id="fileSizeError"></span>
 	<br></br>
 	
