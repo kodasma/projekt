@@ -44,6 +44,7 @@
 		<input name="loginEmail" type="email" value="<?php echo $loginEmail; ?>">
     <span><?php echo $loginEmailError; ?></span>
 		<br><br>
+		<label>Salasõna: </label>
 		<input name="loginPassword" placeholder="Salasõna" type="password">
     <span></span>
 		<br><br>
