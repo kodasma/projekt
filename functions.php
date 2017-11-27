@@ -73,6 +73,23 @@
     return $ideasHTML;
   }
 	
+	function saveStory($story){
+		//echo $color;
+		$notice = "";
+		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
+		$stmt = $mysqli->prepare("INSERT INTO projectstories (userid, story) VALUES (?, ?)");
+		echo $mysqli->error;
+		$stmt->bind_param("is", $_SESSION["userId"], $story);
+		if($stmt->execute()){
+			$notice = "Lugu on salvestatud!";
+		} else {
+			$notice = "Loo salvestamisel tekkis viga: " .$stmt->error;
+		}
+		$stmt->close();
+		$mysqli->close();
+		return $notice;
+	}
+	
 	function test_input($data){
 		$data = trim($data); //ebavajalikud tühikud jms eemaldada
 		$data = stripslashes($data);//kaldkriipsud jms eemaldada
