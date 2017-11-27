@@ -39,20 +39,6 @@ body {
   animation: pastelRainbow 5s ease infinite;
 }
 
-.menu {
-  margin-top: 150px;
-  margin-left: 50px;
-}
-
-li {
-  padding: 10px;
-}
-
-.image {
-  display: absolute;
-  width: 40%;
-}
-
 
 
 
