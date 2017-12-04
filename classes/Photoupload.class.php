@@ -35,7 +35,7 @@
 		
 		
 		private function createImage () {
-		if($this->imageFileType == "jpg" or $imageFileType == "jpeg"){
+		if($this->imageFileType == "jpg" or $this->imageFileType == "jpeg"){
 					$this->myTempImage = imagecreatefromjpeg($_FILES["fileToUpload"]["tmp_name"]);
 				}
 				if($this->imageFileType == "png"){
@@ -87,7 +87,7 @@
 		public function savePhoto($directory, $fileName) {
 			$target_file = $directory .$fileName;
 			$notice ="";
-			if($this->imageFileType == "jpg" or $imageFileType == "jpeg"){
+			if($this->imageFileType == "jpg" or $this->imageFileType == "jpeg"){
 					if(imagejpeg($this->myImage, $target_file, 90)){
 						$notice = "true";
 					} else {
