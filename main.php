@@ -1,9 +1,7 @@
 <?php
-
 	$allStories = "";
 	require("functions.php");
 	$allStories = readAllStories();
-
 ?>
 
 
@@ -16,23 +14,24 @@
 	<title>
 		Koduloomade blogi
 	</title>
-	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="kmain.css">
+	<link href="https://fonts.googleapis.com/css?family=Telex&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
 <div class="container">
-	<h1>Koduloomade blogi Sinu lemmikule.</h1>
-	<p>Veebileht on loodud oma koduloomade näitamiseks teistele.</p>
+	<div>
+		<h1 class="header">Sinu lemmikud</h1>
 
-	<h2>Senised lood</h2>
+		<div class="menu">
+			<a class="menu-item menu-item-login" href="login.php">Lisa oma lugu</a>
+			<a class="menu-item menu-item-about" href="signup.php">Loo kasutaja</a>
+		</div>
+	</div>
+
 	<div style="width: 40%">
 	<?php echo $allStories; ?>
 	</div>
 
-	<h2>Kui kasutaja on juba olemas, siis</h2>
-	<p><a href="login.php">Lisa pilt</a>!</p>
-
-	<h2>Kui kasutajat pole veel registreeritud</h2>
-	<p><a href="signup.php">Loo kasutaja</a>!</p>
 </div>
 </body>
 </html>
