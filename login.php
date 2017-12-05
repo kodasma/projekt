@@ -35,11 +35,13 @@
 <head>
 	<meta charset="utf-8">
 	<title>Sisselogimine</title>
+  <link rel="stylesheet" href="css/main.css">
+	<link href="https://fonts.googleapis.com/css?family=Telex&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
-	<h2>Logi sisse</h2>
+	<h1 class="li-header">Logi sisse</h1>
 	
-	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+	<form class="form li-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 		<label>Kasutajanimi (E-post): </label><br>
 		<input name="loginEmail" type="email" value="<?php echo $loginEmail; ?>">
     <span><?php echo $loginEmailError; ?></span>
@@ -51,6 +53,7 @@
 		<input name="loginButton" type="submit" value="Logi sisse">
     <span><?php echo $notice; ?></span>
 	</form>
+  <p class="menu-item menu-item-main"><a href="main.php">Pealeht</a></p>
 		
 </body>
 </html>

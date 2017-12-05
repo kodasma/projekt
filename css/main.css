@@ -9,16 +9,12 @@ body {
   color: #333333;
 }
 
-.header {
-  display: -webkit-box;
+h1 {
   font-size: 1.8rem;
   display: flex;
-  -webkit-box-pack: center;
   justify-content: center;
-  -webkit-box-align: center;
   align-items: center;
   padding: 2.5rem 1.5rem;
-
 }
 
 .menu {
@@ -62,7 +58,44 @@ a {
   color: inherit;
 }
 
+.form {
+  text-align: center;
+  justify-content: center;
+}
 
+.menu-item-main {
+  writing-mode: vertical-lr;
+  right: 0;
+  transform: translateY(-50%);
+}
+
+/*Signup*/
+
+.su-header {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.su-form {
+
+}
+
+/*Login*/
+
+.li-header {
+  font-size: 1.8rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2.5rem 1.5rem;
+}
+
+.li-form {
+
+}
 
 
 

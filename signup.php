@@ -163,13 +163,14 @@
 <html lang="et">
 <head>
 	<meta charset="utf-8">
-	<title>Sisselogimine või uue kasutaja loomine</title>
+  <title>Kasutaja loomine</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Telex&amp;subset=latin-ext" rel="stylesheet">
 </head>
 <body>
-  <h1>Kodulooma blogi</h1>
-	
-	<h2>Loo kasutaja</h2>
-	<form method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+	<h1 class="su-header">Loo kasutaja</h1>
+  <form class="form su-form" method="POST" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+  
 		<label>Eesnimi </label>
 		<input name="signupFirstName" type="text" value="<?php echo $signupFirstName; ?>">
     <span><?php echo $signupFirstNameError; ?></span>
@@ -200,7 +201,8 @@
 		<br><br>
 	
 		<input name="signUpButton" type="submit" value="Loo kasutaja">
-	</form>
+  </form>
+  <p class="menu-item menu-item-main"><a href="main.php">Pealeht</a></p>
 		
 </body>
 </html>
