@@ -69,14 +69,18 @@ a {
   transform: translateY(-50%);
 }
 
+.menu-item-out {
+  -webkit-writing-mode: vertical-lr;
+  writing-mode: vertical-lr;
+  left: 0;
+  -webkit-transform: translateY(-50%) rotate(180deg);
+  transform: translateY(-50%) rotate(180deg);
+}
+
 /*Signup*/
 
 .su-header {
-  font-size: 1.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2.5rem 1.5rem;
+
 }
 
 .su-form {
@@ -86,11 +90,7 @@ a {
 /*Login*/
 
 .li-header {
-  font-size: 1.8rem;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  padding: 2.5rem 1.5rem;
+
 }
 
 .li-form {

@@ -39,13 +39,13 @@
 		return $notice;
 	}
 	
-	function signUp($signupFirstName, $signupFamilyName, $signupBirthDate, $gender, $signupEmail, $signupPassword){
+	function signUp($signupFirstName, $signupFamilyName, $signupBirthDate, $signupEmail, $signupPassword){
 		//loome andmebaasiühenduse
 		$mysqli = new mysqli($GLOBALS["serverHost"], $GLOBALS["serverUsername"], $GLOBALS["serverPassword"], $GLOBALS["database"]);
 		//valmistame ette käsu andmebaasiserverile
-		$stmt = $mysqli->prepare("INSERT INTO projectusers (firstname, lastname, birthday, gender, email, password) VALUES (?, ?, ?, ?, ?, ?)");
+		$stmt = $mysqli->prepare("INSERT INTO projectusers (firstname, lastname, birthday, email, password) VALUES (?, ?, ?, ?, ?)");
 		echo $mysqli->error;
-		$stmt->bind_param("sssiss", $signupFirstName, $signupFamilyName, $signupBirthDate, $gender, $signupEmail, $signupPassword);
+		$stmt->bind_param("sssss", $signupFirstName, $signupFamilyName, $signupBirthDate, $signupEmail, $signupPassword);
 		if($stmt->execute()){
 			echo "\n Õnnestus!";
 		} else {

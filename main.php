@@ -21,6 +21,7 @@
 <div class="container">
 	<div>
 		<h1 class="header">Sinu lemmikud</h1>
+		<p class=""></p>
 
 		<div class="menu">
 			<a class="menu-item menu-item-login" href="login.php">Lisa oma lugu</a>

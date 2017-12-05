@@ -114,26 +114,31 @@
 		return $dst;
 	}*/
 ?>
-	<html>
-	<body>
 
-	<h1>Koduloomade blogi</h1>
-	<p><a href="main.php">Pealeht</a></p>
-	<hr>
-	<h2>Foto üleslaadimine</h2>
-	<form action="upload.php" method="post" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
+<!DOCTYPE html>
+<html lang="et">
+<head>
+	<meta charset="utf-8">
+  <title>Loo lisamine</title>
+  <link rel="stylesheet" href="css/main.css">
+  <link href="https://fonts.googleapis.com/css?family=Telex&amp;subset=latin-ext" rel="stylesheet">
+</head>
+<body>
+	<h1>Foto üleslaadimine</h1>
+
+	<form class="form up-form" action="upload.php" method="post" enctype="multipart/form-data" action="<?php echo htmlspecialchars($_SERVER["PHP_SELF"]); ?>">
 		<label>Valige pildifail:</label>
 		<input type="file" name="fileToUpload" id="fileToUpload"><br><br>
 		<label>Lisage pildi kohta paar sõna:</label><br>
 		<textarea name="story"></textarea><br><br>
 		<input type="submit" value="Lae üles" name="submit" id="submitPhoto"><span id="fileSizeError"></span>
 		<span><?php echo $notice; ?></span>
-	<br></br>
-	
-	
+		<br></br>
 	</form>
-	<p><a href="?logout=1">Logi välja</a>!</p>
 
-	</body>
-	</html>
+	<p class="menu-item menu-item-main"><a href="main.php">Pealeht</a></p>
+	<p class="menu-item menu-item-out"><a href="?logout=1">Logi välja</a></p>
+
+</body>
+</html>
 	

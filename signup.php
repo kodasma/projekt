@@ -11,7 +11,6 @@
   $signupFirstName = "";
   $signupFamilyName = "";
   $signupEmail = "";
-  $gender = "";
   $signupBirthDay = null;
   $signupBirthMonth = null;
   $signupBirthYear = null;
@@ -24,7 +23,6 @@
   $signupFirstNameError = "";
   $signupFamilyNameError = "";
   $signupEmailError = "";
-  $signupGenderError = "";
   $signupPasswordError = "";
   $signupBirthDayError = "";
   $signupBirthMonthError = "";
@@ -100,20 +98,15 @@
     }
   }
   
-  if (isset($_POST["gender"]) && !empty($_POST["gender"])){ //kui on määratud ja pole tühi
-      $gender = intval($_POST["gender"]);
-    } else {
-      $signupGenderError = " (Palun vali sobiv!) Määramata!";
-    }
 
   //UUE KASUTAJA ANDMEBAASI KIRJUTAMINE, kui kõik on olemas 
-  if (empty($signupFirstNameError) and empty($signupFamilyNameError) and empty($signupBirthDayError) and empty($signupGenderError) and empty($signupEmailError) and empty($signupPasswordError)) {
+  if (empty($signupFirstNameError) and empty($signupFamilyNameError) and empty($signupBirthDayError) and empty($signupEmailError) and empty($signupPasswordError)) {
     // echo "hakkan salvestama";
     //krüpteerin parooli
     $signupPassword = hash("sha512", $_POST["signupPassword"]);
     //echo "\n Parooli " .$_POST["signupPassword"] ."räsi" . $signupPassword;
     //kutsume välja kasutaja salvestamise funktsiooi 
-    signUp($signupFirstName, $signupFamilyName, $signupBirthDate, $gender, $signupEmail, $signupPassword);
+    signUp($signupFirstName, $signupFamilyName, $signupBirthDate, $signupEmail, $signupPassword);
   }
   
 
@@ -184,12 +177,6 @@
       echo $signupDaySelectHTML .$signupMonthSelectHTML .$signupYearSelectHTML;
     ?>
     <span><?php echo $signupBirthDayError; ?></span>
-		<br><br>
-		<label>Sugu</label><span>
-		<br>
-		<input type="radio" name="gender" value="1" <?php if ($gender == '1') {echo 'checked';} ?>><label>Mees</label> <!-- Kõik läbi POST'i on string!!! -->
-		<input type="radio" name="gender" value="2" <?php if ($gender == '2') {echo 'checked';} ?>><label>Naine</label>
-    <span><?php echo $signupGenderError; ?></span>
 		<br><br>
 		
 		<label>Kasutajanimi (E-post)</label>
