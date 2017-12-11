@@ -29,7 +29,7 @@
 		</div>
 	</div>
 
-	<div style="width: 40%">
+	<div class="story" style="width: 40%">
 	<?php echo $allStories; ?>
 	</div>
 

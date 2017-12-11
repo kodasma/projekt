@@ -77,26 +77,11 @@ a {
   transform: translateY(-50%) rotate(180deg);
 }
 
-/*Signup*/
-
-.su-header {
-
+.story {
+  display: block;
+  position: relative;
+  margin: 0 auto;
 }
-
-.su-form {
-
-}
-
-/*Login*/
-
-.li-header {
-
-}
-
-.li-form {
-
-}
-
 
 
 
